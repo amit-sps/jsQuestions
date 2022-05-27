@@ -167,3 +167,11 @@ console.log(remSpacificElem([2, 5, 9, 6], 5));//[2, 9, 6]
 
 const isContained=(arr,elm)=>arr.indexOf(elm)!=-1?`true`:`false`
 console.log(isContained([2, 5, 9, 6],5))
+
+// 14. Write a JavaScript function to get nth largest element from an unsorted array
+
+const nthLargestElem=(arr,nth)=>{
+    let theSortedArr=arr.sort((a,b)=>a-b)
+    return `the nth(${nth}) largest element in [${arr}] is ${theSortedArr[nth]}`
+}
+console.log(nthLargestElem([ 43, 56, 23, 89, 88, 90, 99, 652],4))
