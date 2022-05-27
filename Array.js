@@ -102,4 +102,17 @@ const removeFromArray=(arr)=>{
 let theArr=[NaN, 0, 15, false, -22, '',undefined, 47, null]
 console.log(removeFromArray(theArr))
 
-// 9.
+// 9.Write a JavaScript function to find the difference of two arrays
+const diffOfArray=(arr1,arr2)=>{
+    let diff=[]
+   arr1.forEach((d)=>{
+       if(arr2.indexOf(d)==-1)
+       diff.push(d)
+   })
+   arr2.forEach((d)=>{
+    if(arr1.indexOf(d)==-1)
+    diff.push(d)
+})
+return diff
+}
+console.log(diffOfArray([1, 2, 3],[100, 2, 1, 10]))
