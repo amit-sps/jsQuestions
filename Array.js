@@ -162,3 +162,8 @@ const remSpacificElem=(arr,rm)=>{
     return arr
 }
 console.log(remSpacificElem([2, 5, 9, 6], 5));//[2, 9, 6]
+
+// 13.  Write a JavaScript function to find an array contains a specific element
+
+const isContained=(arr,elm)=>arr.indexOf(elm)!=-1?`true`:`false`
+console.log(isContained([2, 5, 9, 6],5))
