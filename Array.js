@@ -148,3 +148,17 @@ const mostFreq=(arr)=>{
     return `${key} (${value}  times)`
 }
 console.log(mostFreq([3, 'a', 'a', 'a', 2, 3, 'a', 3, 'a', 2, 4, 9, 3]))
+
+// 12. Write a JavaScript function to remove a specific element from an array
+const remSpacificElem=(arr,rm)=>{
+    if(!rm)
+    return `data to remove is required!`
+    if(!arr)
+    return `array is required!`
+    let indx=arr.indexOf(rm)
+    if(indx==-1)
+    return `${rm} is not in array!`
+    arr.splice(indx,1)
+    return arr
+}
+console.log(remSpacificElem([2, 5, 9, 6], 5));//[2, 9, 6]
