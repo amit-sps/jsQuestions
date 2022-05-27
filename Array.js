@@ -74,6 +74,7 @@ const findLeapYear=(range)=>{
 findLeapYear(range)
 
 // 7. Write a JavaScript program to find duplicate values in a JavaScript array
+// *Solution
 let simpleArr=[1,2,3,4,2,3,6,7,8,4]
 const dublicateValue=(arr)=>{
     let theNum=[]
@@ -91,6 +92,7 @@ console.log(dublicateValue(simpleArr))
 
 // 8.Write a JavaScript function to remove. 'null', '0', '""', 'false', 'undefined' and 'NaN' values from an array.
 // [NaN, 0, 15, false, -22, '',undefined, 47, null]
+// *Solution
 const removeFromArray=(arr)=>{
     let dubArr=[]
     arr.forEach((e)=>{
@@ -103,6 +105,7 @@ let theArr=[NaN, 0, 15, false, -22, '',undefined, 47, null]
 console.log(removeFromArray(theArr))
 
 // 9.Write a JavaScript function to find the difference of two arrays
+// *Solution
 const diffOfArray=(arr1,arr2)=>{
     let diff=[]
    arr1.forEach((d)=>{
@@ -116,3 +119,32 @@ const diffOfArray=(arr1,arr2)=>{
 return diff
 }
 console.log(diffOfArray([1, 2, 3],[100, 2, 1, 10]))
+
+
+// 10. Write a JavaScript program to sort the items of an array
+// *Solution
+let thearr= [ 3, 8, 7, 6, 5, -4, 3, 2, 1 ];
+let theSortedArray=thearr.sort((a,b)=>a-b)
+console.log(theSortedArray)
+
+// 11.Write a JavaScript program to find the most frequent item of an array.
+// [3, 'a', 'a', 'a', 2, 3, 'a', 3, 'a', 2, 4, 9, 3]
+// *Solution
+const mostFreq=(arr)=>{
+    let key;
+    let value=0;
+    arr.forEach((d)=>{
+        let count=0;
+        arr.forEach((d2)=>{
+            if(d==d2){
+                count++
+            }
+        })
+        if(value<count){
+        value=count
+        key=d
+        }
+    })
+    return `${key} (${value}  times)`
+}
+console.log(mostFreq([3, 'a', 'a', 'a', 2, 3, 'a', 3, 'a', 2, 4, 9, 3]))
